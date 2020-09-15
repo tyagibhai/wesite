@@ -15,3 +15,6 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('postcss-import'),
     require('tailwindcss'),
 ]);
+
+//frontend css
+mix.sass('resources/sass/app.scss', 'public/frontend/css').purgeCss();

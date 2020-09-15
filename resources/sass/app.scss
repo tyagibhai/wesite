@@ -1,0 +1,23 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//theme css file
+@import "theme/mixins";
+@import "theme/reset";
+@import "theme/header";
+@import "theme/responsive";
+@import "theme/banner";
+@import "theme/section-intro";
+@import "theme/home";
+@import "theme/clients";
+@import "theme/blog";
+@import "theme/contact";
+@import "theme/btn";
+@import "theme/footer";
+@import "theme/custom";
