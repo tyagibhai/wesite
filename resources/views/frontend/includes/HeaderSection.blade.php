@@ -13,14 +13,13 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li class="nav-item active"><a href="/" class="nav-link">Home</a></li> 
-              <li class="nav-item"><a href="/articles" class="nav-link">Articles</a></li>
-              <li class="nav-item"><a href="/series" class="nav-link">Series</a></a></li>
-              <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="/" class="nav-link">Home</a></li> 
+              {{-- <li class="nav-item"><a href="https://ascodelab.github.io/-/#/" class="nav-link">About Me</a></li> --}}
+              {{--<li class="nav-item"><a href="/series" class="nav-link">Series</a></a></li> --}}
             </ul>
             <ul class="navbar-right">
               <li class="nav-item">
-                <button class="button button-header bg">Sign up</button>
+                <button class="button button-header "><a href="/articles">Articles</a></button>
               </li>
             </ul>
           </div> 

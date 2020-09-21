@@ -51,16 +51,3 @@ border-color: #f0f0f0;
 }
 </style>
 
-<script>
-    export default {
-        name: "Newsletter",
-        mounted() {},
-        computed: {},
-        data() {
-            return {
-                
-            }
-        }
-    }
-</script>
-
