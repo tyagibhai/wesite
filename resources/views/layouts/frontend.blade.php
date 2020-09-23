@@ -14,7 +14,7 @@
     <div id="app">
         {{-- Header section --}}
         <div class="header-component">
-            @include('frontend.includes.HeaderSection')
+            @livewire('common.header-section') 
         </div>
         {{-- Main content section --}}
         <main class="side-main">
@@ -23,13 +23,13 @@
         {{-- footer section --}}
         <div class="footer-wrapper" style="position:relative:top:-80px;">
             <section class="section call-to-action is-primary has-text-centered">
-                @include('frontend.includes.FooterCallToActionSection') 
+                @livewire('common.footer-call-to-action-section')  
             </section>
             <section class="section newsletter">
-                @include('frontend.includes.NewsLetterSection')    
+                @livewire('common.newsletter-section')      
             </section>
             <div class="footer-component">
-                @include('frontend.includes.FooterSection') 
+                @livewire('common.footer-section') 
             </div>
         </div>
     </div>

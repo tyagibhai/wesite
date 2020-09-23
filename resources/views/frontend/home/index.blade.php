@@ -2,10 +2,9 @@
 
 @section('content')
     <div class="component-wrapper">
-        @include('frontend.includes.BannerSection') 
-        @include('frontend.includes.FeaturesSection') 
-        @include('frontend.includes.AboutSection')
-        
-        @livewire('blog-list-cards') 
+        @livewire('index.banner-section') 
+        @livewire('index.features-section') 
+        @livewire('index.about-section')
+        @livewire('common.blog-list-cards') 
     </div>
 @endsection

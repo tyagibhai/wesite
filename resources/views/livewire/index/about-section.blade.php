@@ -1,4 +1,3 @@
-
 <section class="section-padding--small bg-magnolia">
     <div class="container">
       <div class="row no-gutters align-items-center">

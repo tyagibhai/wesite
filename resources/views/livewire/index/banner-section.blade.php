@@ -1,5 +1,4 @@
-
-  <section class="hero-banner mb-30px">
+<section class="hero-banner mb-30px">
     <div class="container">
         <div class="row">
           <div class="col-lg-7">
