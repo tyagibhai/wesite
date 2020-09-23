@@ -14,8 +14,8 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
               <li class="nav-item"><a href="/" class="nav-link">Home</a></li> 
-              {{-- <li class="nav-item"><a href="https://ascodelab.github.io/-/#/" class="nav-link">About Me</a></li> --}}
-              {{--<li class="nav-item"><a href="/series" class="nav-link">Series</a></a></li> --}}
+              <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+
             </ul>
             <ul class="navbar-right">
               <li class="nav-item">

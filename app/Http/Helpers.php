@@ -41,14 +41,28 @@ function formatArticleList($list){
             $article->post_date = 'Yesterday';
         }
         if($diff>1 && $diff<=7){
-            $article->post_date = "$diff days ago";
+            $article->post_date = changeDateFormate($article->post_date, "Y-m-d H:i:s", "l");
         }
         if($diff>7){
             $article->post_date = changeDateFormate($article->post_date, "Y-m-d H:i:s", "d M, Y");
         }
-        
+        //post_excerpt format
+        $article->post_excerpt =  postExcerptformat($article->post_excerpt);
         array_push($articleList,$article);
     }
     
     return $articleList;
+}
+
+//post excerpt format function
+
+function postExcerptformat($string){
+    if (strlen($string) > 120) {
+        $stringCut = substr($string, 0,120);
+        $endPoint = strrpos($stringCut, ' ');
+        //if the string doesn't contain any space then it will cut without word basis.
+        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+        $string .= '...';
+    }
+    return $string;
 }

@@ -10,7 +10,7 @@ class Article extends Model
     protected $table = "wp_posts";
 
     //getting all parent categories
-    public function getAllCategoryAndTag(){
+    public static function getAllCategoryAndTag(){
     
         $data = DB::table('wp_terms')
                     ->join('wp_term_taxonomy', function ($join) {
@@ -23,7 +23,7 @@ class Article extends Model
         return $data;  
     }
     //getting all posts [ for category]
-    public function getAllArticle($slug = null, $type = '1', $offset = 0, $limit = 10){
+    public static function getAllArticle($slug = null, $type = '1', $offset = 0, $limit = 12){
 
         $typeConfig = [ '1'=> 'category', '2'=> 'post_tag'];
         $type = $typeConfig[$type];
@@ -58,7 +58,7 @@ class Article extends Model
         }
         //feteching the article list
         $articles = DB::table('wp_posts AS p')
-                        ->select('p.ID', 'p.post_date','p.post_title','p.post_content','p.post_name','p.post_modified','p.post_excerpt','m2.meta_value','u.user_nicename', 'u.display_name', 'u.user_email', 't.name as terms_name')
+                        ->select('p.ID', 'p.post_date','p.post_title','p.post_name','p.post_modified','p.post_excerpt','m2.meta_value','u.user_nicename', 'u.display_name', 'u.user_email', 't.name as terms_name')
                         ->leftJoin('wp_postmeta AS m1', function ($join){
                             $join->on('m1.post_id', '=', 'p.ID');        
                         })
@@ -91,10 +91,10 @@ class Article extends Model
                         ->get()
                         ->toArray();
 
-        return $articles;
+        return formatArticleList($articles);
     }
     //getting article categories and tags
-    public function getPostTagsAndCategories($slug = 'oh,no'){
+    public static function getPostTagsAndCategories($slug = 'oh,no'){
         //DB::enableQueryLog();
         //dd(DB::getQueryLog());
         $data = DB::table('wp_posts as p')
@@ -117,7 +117,7 @@ class Article extends Model
         return $data;
     }
     //get article details
-    public function getArticleDetails($slug = 'oh,no',$type = 'category'){
+    public static function getArticleDetails($slug = 'oh,no',$type = 'category'){
 
         $details = DB::table('wp_posts AS p')
         ->select('p.ID', 'p.post_date','p.post_title','p.post_content','p.post_name','p.post_modified','p.post_excerpt','m2.meta_value','u.user_nicename', 'u.display_name', 'u.user_email', 't.name as terms_name')
@@ -152,7 +152,7 @@ class Article extends Model
         ->get()
         ->toArray();
 
-        return $details;
+        return formatArticleList($details);
     }
 
 }
