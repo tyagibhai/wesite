@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\IndexController;
+use App\Http\Livewire\Pages\Home\Index as HomeComponent;
+use App\Http\Livewire\Pages\Article\Index as ArticleComponent;
+
 use App\Http\Controllers\ArticleController;
 
 /*
@@ -17,8 +19,8 @@ use App\Http\Controllers\ArticleController;
 */
 
 //frontend routes
-Route::get('/', [IndexController::class,'index'])->name('home');
-Route::get('/article/{slug}', [ArticleController::class,'index']);
+Route::get('/',HomeComponent::class)->name('home');
+Route::get('/article/{slug}',ArticleComponent::class);
 
 
 
