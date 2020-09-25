@@ -51,7 +51,7 @@ function formatArticleList($list){
         array_push($articleList,$article);
     }
     
-    return $articleList;
+    return json_decode(json_encode($articleList), true);
 }
 
 //post excerpt format function

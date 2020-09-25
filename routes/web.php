@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\IndexController;
 
 //frontend routes
 Route::get('/', [IndexController::class,'index'])->name('home');
+Route::get('/article/{slug}', [ArticleController::class,'index']);
 
 
 

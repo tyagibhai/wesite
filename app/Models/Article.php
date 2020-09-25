@@ -118,7 +118,7 @@ class Article extends Model
     }
     //get article details
     public static function getArticleDetails($slug = 'oh,no',$type = 'category'){
-
+        //DB::enableQueryLog();
         $details = DB::table('wp_posts AS p')
         ->select('p.ID', 'p.post_date','p.post_title','p.post_content','p.post_name','p.post_modified','p.post_excerpt','m2.meta_value','u.user_nicename', 'u.display_name', 'u.user_email', 't.name as terms_name')
         ->leftJoin('wp_postmeta AS m1', function ($join){
@@ -146,11 +146,12 @@ class Article extends Model
         ->where('tax.taxonomy','=',$type)
         ->where('p.post_status','=','publish')
         ->where('p.post_type','=','post')
+        ->where('post_name','=', $slug)
         ->orderBy('p.post_date', 'desc')
         ->limit(1)
         ->offset(0)
-        ->get()
-        ->toArray();
+        ->get();
+        //dd(DB::getQueryLog());
 
         return formatArticleList($details);
     }
