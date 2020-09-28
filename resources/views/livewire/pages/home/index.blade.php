@@ -4,5 +4,6 @@
         @livewire('home.features-section') 
         @livewire('home.about-section')
         @livewire('common.blog-list-cards') 
+        @livewire('article.load-more')
     </div>
 @endsection

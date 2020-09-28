@@ -10,14 +10,16 @@ class Article extends Model
     protected $table = "wp_posts";
 
     //getting all parent categories
-    public static function getAllCategoryAndTag(){
+    public static function getAllCategoryAndTag($type ="category", $limit = 5){
     
         $data = DB::table('wp_terms')
-                    ->join('wp_term_taxonomy', function ($join) {
+                    ->join('wp_term_taxonomy', function ($join) use($type){
                         $join->on('wp_terms.term_id', '=', 'wp_term_taxonomy.term_taxonomy_id')
                         ->where('wp_term_taxonomy.parent', '=', 0);
                     })
+                     ->where('taxonomy', '=', $type)
                     ->orderBy('count', 'desc')
+                    ->limit($limit)
                     ->get();
         //returning the response
         return $data;  
@@ -98,7 +100,7 @@ class Article extends Model
         //DB::enableQueryLog();
         //dd(DB::getQueryLog());
         $data = DB::table('wp_posts as p')
-                    ->select('p.post_name','tax.taxonomy as type','t.name','t.slug')
+                    ->select('p.post_name','p.post_title','post_date','tax.taxonomy as type','t.name','t.slug','u.user_nicename', 'u.display_name')
                     ->leftJoin('wp_term_relationships AS rel', function ($join){
                         $join->on('id', '=', 'object_id');        
                     })
@@ -108,13 +110,16 @@ class Article extends Model
                     ->join('wp_terms as t', function ($join){
                         $join->on('t.term_id', '=', 'tax.term_id');        
                     })
+                    ->join('wp_users AS u', function ($join){
+                        $join->on('u.id', '=', 'p.post_author');        
+                    })
                     ->where('post_name', '=', $slug)
                     ->where('post_status', '=','publish')
                     ->get()
                     ->toArray();
         //returning the response
         
-        return $data;
+        return formatPostTagsAndCategories($data);
     }
     //get article details
     public static function getArticleDetails($slug = 'oh,no',$type = 'category'){
