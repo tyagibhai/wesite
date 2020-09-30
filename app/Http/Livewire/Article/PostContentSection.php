@@ -17,8 +17,6 @@ class PostContentSection extends Component
         if(!count($this->post_details)){ abort('404'); }
         //pass psot object
         $this->post_details = $this->post_details[0];
-        //pssing value to page header section  component
-        $this->emit('setData');
     }
 
     public function render()
