@@ -48,7 +48,9 @@ class Seo extends Component
             $pageName="home";
         }else{
             $pageName=$arr[0];
-            $this->pageSlug = $arr[1];
+            if(count($arr)>1){
+                $this->pageSlug = $arr[1];
+            }          
         }
         //return page name
         return $pageName;
@@ -67,7 +69,7 @@ class Seo extends Component
                 'post_excerpt'=>'contact description',
                 'meta_value'=>''
             ],
-            'search'=>[
+            'articles'=>[
                 'post_title'=>'search',
                 'post_excerpt'=>'search description',
                 'meta_value'=>''

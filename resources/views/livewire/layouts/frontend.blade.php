@@ -11,6 +11,8 @@
 </head>
 <body>
     <div id="app">
+        {{-- loader component --}}
+        @livewire('common.loader') 
         {{-- Header section --}}
         <div class="header-component">
             @livewire('common.header-section') 

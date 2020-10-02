@@ -19,6 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('last_name',60);
             $table->string('email',120);
             $table->string('phone',20);
+            $table->text('subject');
             $table->text('message');
             $table->unsignedTinyInteger('status')->default(1);
             $table->timestamps();

@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\Pages\Home\Index as HomeComponent;
 use App\Http\Livewire\Pages\Article\Index as ArticleComponent;
-
-use App\Http\Controllers\ArticleController;
+use App\Http\Livewire\Pages\Contact\Index as ContactComponent;
+use App\Http\Livewire\Pages\Search\Index as SearchComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,8 @@ use App\Http\Controllers\ArticleController;
 
 //frontend routes
 Route::get('/',HomeComponent::class)->name('home');
+Route::get('/contact',ContactComponent::class)->name('contact');
+Route::get('/articles/explore/{slug?}',SearchComponent::class)->name('search');
 Route::get('/article/{slug}',ArticleComponent::class);
 
 
