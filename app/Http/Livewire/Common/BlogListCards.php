@@ -19,6 +19,8 @@ class BlogListCards extends Component
     }
     public function loadMore()
     {
+        //show loading popup
+        $this->emit('loading',true);
         $slug = null;
         $type = 1;
         $from =0;
@@ -27,6 +29,8 @@ class BlogListCards extends Component
         $this->articles = Article::getAllArticle($slug,$type,$from,$limit);
         //update offset
         $this->offset++;
+        //hide loading popup
+        $this->emit('loading',false);
 
     }
 

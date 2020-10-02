@@ -261,3 +261,41 @@ footer .copyright{
   background:#31246f;
   color: #f5f5f5;
 }
+.loader-overlay-hide{
+  display:none;
+}
+.loader-overlay{
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  background:#000;
+  z-index:1111111;
+  opacity:.85;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-text{
+  position: relative;
+  top: 39px;
+  left: -44px;
+}
+.acl-success{
+    background-color: #d7f3e3;
+    border-color: #c7eed8;
+    top: 10px;
+    background: #302470;
+    color: #3cda49;
+    border: 1px solid #302470;
+}
+.acl-error{
+  background-color: #d7f3e3;
+  border-color: #c7eed8;
+  top: 10px;
+  background: #302470;
+  color:#ef0564;
+  border: 1px solid #302470;
+}
