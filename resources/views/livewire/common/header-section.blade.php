@@ -18,7 +18,7 @@
             </ul>
             <ul class="navbar-right">
                 <li class="nav-item">
-                <button class="button button-header "><a href="/articles">Articles</a></button>
+                    <a href="/articles/explore" class="button bg">Articles</a>
                 </li>
             </ul>
             </div> 

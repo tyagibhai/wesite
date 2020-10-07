@@ -8,21 +8,43 @@ use Livewire\Component;
 class BlogListCards extends Component
 {
     //event listener
-    protected $listeners = ['loadMore'];
+    protected $listeners = ['loadMore','filterByCategory'];
     // public variable
     public $articles = [];
     public $offset = 1;
+    public $slug = null;
+    public $type = 1;
     
     public function mount()
     {
-        $this->articles = Article::getAllArticle(null,1,0,5);   
+        $slug = $this->slug;
+        $type = $this->type;
+        $from =0;
+        $limit = $this->offset*9;
+
+        $this->articles = Article::getAllArticle($slug,$type,$from,$limit);   
     }
     public function loadMore()
     {
+        $slug = $this->slug;
+        $type = $this->type;
+        $from =0;
+        $limit = $this->offset*9;
+        //loading data
+        $this->articles = Article::getAllArticle($slug,$type,$from,$limit);
+        //update offset
+        $this->offset++;
+
+    }
+    // filter by category
+    public function filterByCategory($category)
+    {
+        //setting slug property value
+        $this->slug = $category;
         //show loading popup
-        $this->emit('loading',true);
-        $slug = null;
-        $type = 1;
+        //$this->emit('loading',true);
+        $slug = $this->slug;
+        $type = $this->type;
         $from =0;
         $limit = $this->offset*9;
         //loading data
@@ -30,7 +52,7 @@ class BlogListCards extends Component
         //update offset
         $this->offset++;
         //hide loading popup
-        $this->emit('loading',false);
+        //$this->emit('loading',false);
 
     }
 

@@ -37277,6 +37277,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./custom */ "./resources/js/custom.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37315,6 +37317,32 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/custom.js":
+/*!********************************!*\
+  !*** ./resources/js/custom.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('.search-input').on('blur focus', function (e) {
+    $(".results-box").slideToggle(200);
+  });
+}); //livewire interction
+
+document.addEventListener("livewire:load", function () {
+  //show loader when network request starts
+  Livewire.hook('element.updating', function (fromEl, toEl, component) {
+    $('.loader-overlay-hide').addClass('loader-overlay');
+  }); //hide loader when network request ends
+
+  Livewire.hook('element.updated', function (fromEl, toEl, component) {
+    $('.loader-overlay-hide').removeClass('loader-overlay');
+  });
+});
 
 /***/ }),
 

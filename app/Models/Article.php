@@ -160,5 +160,14 @@ class Article extends Model
 
         return formatArticleList($details);
     }
+    //full text search
+    public static function search($terms = null){
+        $resp = DB::table('wp_posts')
+                ->whereRaw('MATCH (post_title, post_content, post_excerpt) AGAINST (?)' , array($terms))
+                ->orderBy('post_date', 'desc')
+                ->get()
+                ->toArray();
 
+        return json_decode(json_encode($resp), true);
+    }
 }

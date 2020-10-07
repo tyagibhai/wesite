@@ -111,3 +111,19 @@ function getThumbnail($image){
     //return image path
     return $image_path.$image_name.$image_ext;
 }
+
+//filter by key value
+function filter_by_value ($array, $index, $value){
+    $newarray = [];
+    if(is_array($array) && count($array)>0) 
+    {
+        foreach(array_keys($array) as $key){
+            $temp[$key] = $array[$key][$index];
+            
+            if ($temp[$key] == $value){
+                $newarray[$key] = $array[$key];
+            }
+        }
+      }
+  return $newarray;
+}

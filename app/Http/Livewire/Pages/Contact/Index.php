@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public $page_title = "Contact Us";
+    public $page_title = "How can I help you?";
 
     public function render()
     {

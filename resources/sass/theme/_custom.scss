@@ -1,4 +1,24 @@
+::-webkit-input-placeholder { /* Edge */
+  color: #777 !important;
+  text-align: center;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  color: #777 !important;
+  text-align: center;
+}
+
+::placeholder {
+  color: #777 !important;
+  text-align: center;
+}
 .space{
+    &-10{
+        height:10px;
+    }
+    &-20{
+      height:20px;
+    }
     &-50{
         height:50px;
     }
@@ -17,6 +37,17 @@
     &-100{
         height:100px;
     } 
+}
+.select-theme{
+  outline:none !important;
+  box-shadow: none !important;
+  border:1px solid #ddd;
+}
+.select-theme option {
+  margin: 40px;
+  background:#22195b;
+  color:#f5f5f5;
+  text-shadow: 0 1px 0 rgba(163, 62, 62, 0.4);
 }
 // css for blog list cards
 .blog-list-card{
@@ -304,4 +335,64 @@ footer .copyright{
   font-size: 13px;
   top: 8px;
   position: relative;
+}
+.search-wrapper{
+  display: flex;
+  justify-content: center;
+  background: #20185a;
+  top:-50px;
+}
+.search-wrapper input{
+  outline:none;
+  border: none !important;
+  background: #22195b !important;
+  border-bottom: 5px solid #5d46e0 !important;
+  color:#ddd !important;
+  text-align: center;
+  opacity:.7;
+}
+.search-wrapper input:hover,.search-wrapper input:focus{
+  outline:none !important;
+  box-shadow: none !important;
+  transition: 1s ease-in-out;
+  border: none !important;
+  background: #22195b !important;
+  border-bottom: 5px solid #3015ec !important;
+  opacity:1;
+}
+.search-wrapper .results-box{
+  padding:10px;
+  position: absolute;
+  z-index: 99999;
+  width:94%;
+}
+.search-blog-list-wrap{
+  z-index: 9990;
+}
+.search-wrapper .results-box li{
+  padding:7px;
+  border-radius: 7px;
+}
+.search-wrapper .results-box li:hover{
+  background: #22195b;
+}
+.search-wrapper .results-box li a{
+  color:#000;
+  display:inline-block;
+  width: 100%;
+}
+.search-wrapper .results-box li a:hover{
+  color:#fff;
+}
+.search-wrapper .results-box li:hover > a{
+  color:#fff;
+}
+.label-info{
+  padding:10px 5px;
+}
+a.bg{
+  border: 1px solid #291d6b !important;
+}
+.sr-date{
+  color:#aaa;
 }

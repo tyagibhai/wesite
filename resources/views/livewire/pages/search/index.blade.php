@@ -1,9 +1,8 @@
 @section('content')
     <div class="component-wrapper">
-        @livewire('home.banner-section') 
-        @livewire('home.features-section') 
-        @livewire('home.about-section')
-        @livewire('common.blog-list-cards') 
-        @livewire('article.load-more')
+         @livewire('pages.search.search-header',['page_title'=>$page_title])
+         @livewire('pages.search.search')
+         <div class="space-50"></div>
+         @livewire('pages.search.search-filter',['slug'=>$slug,'type'=>$type])  
     </div>
 @endsection
