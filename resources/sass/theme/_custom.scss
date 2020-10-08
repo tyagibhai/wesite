@@ -42,6 +42,8 @@
   outline:none !important;
   box-shadow: none !important;
   border:1px solid #ddd;
+  width:200px;
+  height:38px;
 }
 .select-theme option {
   margin: 40px;
@@ -260,7 +262,7 @@ footer .copyright{
 }
 .card-body {
   flex: 1 1 auto;
-  min-height: 380px;
+  min-height: 335px;
   padding: 1.25rem;
 }
 .blog_details img{
@@ -372,6 +374,7 @@ footer .copyright{
 .search-wrapper .results-box li{
   padding:7px;
   border-radius: 7px;
+  transition: 0.4s ease-in-out;
 }
 .search-wrapper .results-box li:hover{
   background: #22195b;
@@ -383,16 +386,20 @@ footer .copyright{
 }
 .search-wrapper .results-box li a:hover{
   color:#fff;
+  transition: 0.6s ease-in-out;
 }
 .search-wrapper .results-box li:hover > a{
   color:#fff;
-}
-.label-info{
-  padding:10px 5px;
+  transition: 0.6s ease-in-out;
 }
 a.bg{
   border: 1px solid #291d6b !important;
 }
 .sr-date{
   color:#aaa;
+}
+@media (min-width: 1000px){
+  .search-header-cont {
+    height: 300px;
+  }
 }
