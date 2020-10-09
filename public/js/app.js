@@ -37342,7 +37342,8 @@ document.addEventListener("livewire:load", function () {
   Livewire.hook('element.updated', function (fromEl, toEl, component) {
     $('.loader-overlay-hide').removeClass('loader-overlay');
   });
-});
+}); // 404 page js
+// 404 page js ends
 
 /***/ }),
 
