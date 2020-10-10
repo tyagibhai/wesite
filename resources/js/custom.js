@@ -3,6 +3,10 @@ $(document).ready(function(){
     $('.search-input').on('blur focus',function(e){
         $(".results-box").slideToggle(200);
     });
+    //make background color white if article red page
+    if (window.location.href.indexOf("article/") > -1) {
+        $('body').css({'background':'#fff'});
+    }
 });
 
 

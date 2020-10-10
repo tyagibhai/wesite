@@ -1,3 +1,11 @@
+// theme values override
+.blog_right_sidebar{
+  background:#fff;
+}
+.comments-area {
+  background: #ffffff;
+//ends here
+}
 ::-webkit-input-placeholder { /* Edge */
   color: #777 !important;
   text-align: center;
@@ -403,7 +411,3 @@ a.bg{
     height: 300px;
   }
 }
-
-// 404 page css
-
-// 4040 page css ends

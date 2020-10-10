@@ -14033,6 +14033,14 @@ h3,
 /* footer style end
 	============================================================================================ */
 
+.blog_right_sidebar {
+  background: #fff;
+}
+
+.comments-area {
+  background: #ffffff;
+}
+
 :-ms-input-placeholder {
   /* Internet Explorer */
   color: #777 !important;
