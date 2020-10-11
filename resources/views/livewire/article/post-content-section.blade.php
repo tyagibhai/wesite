@@ -3,6 +3,9 @@
         <div class="feature-img">
             <img class="img-fluid" src="{{env('WP_IMAGE_PATH')}}{{$post_details['meta_value']}}" alt="">
         </div>
+        <div class="post-sharer-container">
+            @livewire('article.share')
+        </div>
         <div class="post-tags-container">
             @livewire('article.post-tags',['post_slug'=>$post_slug])
         </div>

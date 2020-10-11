@@ -14516,3 +14516,19 @@ a.bg {
   }
 }
 
+.ss-wrapper {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.ss-wrapper ul li {
+  display: inline;
+  padding: 3px;
+  font-size: 18px;
+}
+
+.ss-wrapper ul li a:hover {
+  color: #31246e;
+  transition: 0.5s ease-in-out;
+}
+
