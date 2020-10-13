@@ -2,7 +2,7 @@
     <section class="hero-banner hero-banner--sm mb-30px">
         <div class="container">
             <div class="hero-banner--sm__content">
-                <h1>{{$post_header_content['info']['title']}}</h1>
+                <h1 class="post-heading">{{$post_header_content['info']['title']}}</h1>
                 <div class="post-header-link-bred">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb arr-right justify-content-center breadcrumb-arrow">

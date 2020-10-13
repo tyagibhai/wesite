@@ -1,6 +1,54 @@
-// Body
-$body-bg: #f8fafc;
+//custom theme color [ input field ]
+$theme-bg:#D9AFD9;
+$theme-color:#00acc1;
+$theme-bg-panel-heading:#00acc1;
+$theme-h1-color-article:#5e7282;
 
+// theme input
+//$theme-bg-img: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+$theme-bg-img: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+$theme-input-bg-pri:#ebf4f9;
+$theme-input-border-pri:#a9cbde;
+$theme-input-color-pri:#fff;
+
+//theme social
+$theme-social-bg: #c7b8da;
+$theme-social-color:#e68686;
+$theme-social-border:#d0c9cb;
+//:hover
+$theme-social-bg__hover: #df7d97;
+$theme-social-color__hover:#fbf8f8;
+$theme-social-border__hover:#f18eaa;
+
+//theme buttons blue
+$theme-btn-blue-bg:#e0f7fa;
+$theme-btn-blue-border:#e0f7fa;
+$theme-btn-blue-color:#968e8e;
+//:hover
+$theme-btn-blue-bg__hover:#df7d97;
+$theme-btn-blue-border__hover:#df7d97;
+$theme-btn-blue-color__hover:#fff;
+
+//theme buttons pink
+$theme-btn-pink-bg:#df7d97;
+$theme-btn-pink-border:#df7d97;
+$theme-btn-pink-color:#ffffff;
+//:hover
+$theme-btn-pink-bg__hover:#e0f7fa;
+$theme-btn-pink-border__hover:#e0f7fa;
+$theme-btn-pink-color__hover:#968e8e;
+
+//theme buttons blue dark
+$theme-btn-blue-dark-bg:#00acc1;
+$theme-btn-blue-dark-border:#00acc1;
+$theme-btn-blue-dark-color:#ffffff;
+//:hover
+$theme-btn-blue-dark-bg__hover:#df7d97;
+$theme-btn-blue-dark-border__hover:#df7d97;
+$theme-btn-blue-dark-color__hover:#fff;
+
+//Body
+$body-bg: #f8fafc;
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
@@ -25,7 +73,7 @@ $title-color: #3a414e;
 $text-color: #797979;
 $black: #242429;
 $magnolia: #faf9ff;
-$primary-color: #31246e;
+$primary-color: $theme-color;
 $link-color: #797979;
 $white: #fff;
 

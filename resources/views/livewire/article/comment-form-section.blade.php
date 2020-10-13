@@ -16,6 +16,6 @@
             <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
                         required=""></textarea>
         </div>
-        <a href="#" class="button button-postComment">Post Comment</a>
+        <a href="#" class="button button-postComment theme-btn-blue-dark">Post Comment</a>
     </form>
 </div>

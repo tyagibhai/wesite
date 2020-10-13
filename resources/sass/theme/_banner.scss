@@ -2,7 +2,8 @@
 	============================================================================================ */
 .hero-banner{
   position: relative;
-  background: #22195b;
+  background-color: $theme-bg;
+  background-image: $theme-bg-img;
   background-size: cover;
   padding: 90px 0 60px 0;
   // height: 400px;
@@ -54,9 +55,11 @@
     left: 0;
     width: 100%;
     height: 60%;
-    background: url(../../assets/images/banner/banner-bg.png) left center no-repeat;
+    // background: url(../../assets/images/banner/banner-bg.png) left center no-repeat;
     background-size: cover;
     z-index: -1;
+    
+
   }
 
   &--sm{

@@ -10,7 +10,7 @@
             <div class="hero-banner__content">
               <h1>Advanced software made simple</h1>
               <p>Vel aliquam quis, nulla pede mi commodo tristique nam hac Luctun torquent velit felis commodo pellentesque nulla cras vel aliqua quisan nulla pede mi commoda</p>
-              <a class="button bg" href="#">Get Started</a>
+              <a class="button theme-btn-blue" href="{{env('APP_URL')}}/articles/explore">Get Started</a>
             </div>
           </div>
         </div>

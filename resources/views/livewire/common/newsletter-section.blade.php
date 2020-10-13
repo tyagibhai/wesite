@@ -4,11 +4,11 @@
             <div class="col-sm-12">
                 <form wire:submit.prevent="submit">
                     <div class="single">
-                        <h3>Want us to email you occasionally?</h3>
+                        <h3>Don't lose a chance to be among the firsts to know about our upcoming news and updates.</h3>
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email" wire:model="email">
+                            <input type="email" class="form-control theme-input" placeholder="Subscribe To Our Newsletter" wire:model="email">
                             <span class="input-group-btn">
-                            <button class="btn btn-theme" type="submit">Subscribe</button>
+                            <button class="btn theme-btn-blue" type="submit">Subscribe</button>
                             </span>
                         </div>
                         {{-- error filed --}}

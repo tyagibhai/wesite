@@ -12,13 +12,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li> 
-                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="{{env('APP_URL')}}" class="nav-link">Home</a></li> 
+                <li class="nav-item"><a href="{{env('APP_URL')}}/contact" class="nav-link">Contact</a></li>
 
             </ul>
             <ul class="navbar-right">
                 <li class="nav-item">
-                    <a href="/articles/explore" class="button bg">Articles</a>
+                    <a href="{{env('APP_URL')}}/articles/explore" class="button theme-btn-blue">Articles</a>
                 </li>
             </ul>
             </div> 

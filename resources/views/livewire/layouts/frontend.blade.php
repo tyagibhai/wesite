@@ -22,10 +22,7 @@
             @yield('content')
         </main>
         {{-- footer section --}}
-        <div class="footer-wrapper" style="position:relative:top:-80px;">
-            <section class="section call-to-action is-primary has-text-centered">
-                @livewire('common.footer-call-to-action-section')  
-            </section>
+        <div class="footer-wrapper"> 
             <section class="section newsletter">
                 @livewire('common.newsletter-section')      
             </section>

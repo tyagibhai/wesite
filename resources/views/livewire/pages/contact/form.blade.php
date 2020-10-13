@@ -40,7 +40,7 @@
                     </div>
                     </div>
                     {{-- error fields --}}
-                    <button class="button button-postComment" type="submit" {{$disabled}}>Submit</button>
+                    <button class="button button-postComment theme-btn-blue-dark" type="submit" {{$disabled}}>Submit</button>
                     {{-- success message --}}
                     <div class="resp-message">
                         @if (session()->has('message'))

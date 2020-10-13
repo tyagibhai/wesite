@@ -2,7 +2,6 @@
 	============================================================================================ */
 .footer-area {
 	padding: 120px 0px 120px;
-	background: #0e1424;
 	@media (max-width: 991px) {
 		// background: $title-color;
 		padding: 60px 0px;
@@ -57,6 +56,7 @@
 			&:focus {
 				outline: none;
 				box-shadow: none;
+				border:none;
 			}
 			@include placeholder {
 				padding-left: 10px;

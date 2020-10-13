@@ -15,7 +15,7 @@
                                 <img src="{{$article['profile_image']}}"/> {{ $article['display_name']}}
                             </small>
                             <p class="card-text">{{ $article['post_excerpt']}}</p>
-                            <a href="{{env('APP_URL')}}/article/{{$article['post_name']}}" class="read-button">Read Article</a>
+                            <a href="{{env('APP_URL')}}/article/{{$article['post_name']}}" class="button theme-btn-blue-dark">Read Article</a>
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
                             <div class="">
