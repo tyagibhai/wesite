@@ -18,4 +18,5 @@
                 </div>
         </div>
     </div>
+    {{print_r($comments)}}
 </div>

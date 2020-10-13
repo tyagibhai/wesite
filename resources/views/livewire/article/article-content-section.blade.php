@@ -4,8 +4,8 @@
             <div class="col-lg-8 posts-list">
                 <div class="blog_left_sidebar">
                     @livewire('article.post-content-section',['post_slug'=>$post_slug])
-                    @livewire('article.post-comments-section')
-                    @livewire('article.comment-form-section')
+                    @livewire('article.post-comments-section',['post_slug'=>$post_slug])
+                    @livewire('article.comment-form-section',['post_slug'=>$post_slug])
                 </div>
             </div>
             <div class="col-lg-4">
