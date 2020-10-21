@@ -1,5 +1,5 @@
 <div>
-    <section class="hero-banner hero-banner--sm mb-30px">
+    <section class="hero-banner hero-banner--sm mb-30px article-header">
         <div class="container">
             <div class="hero-banner--sm__content">
                 <h1 class="post-heading">{{$post_header_content['info']['title']}}</h1>

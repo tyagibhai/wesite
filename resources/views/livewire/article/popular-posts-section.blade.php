@@ -5,7 +5,7 @@
             <img src="{{env('WP_IMAGE_PATH')}}/{{$post['post_thumbnail']}}" alt="{{$post['post_title']}}" style="width:28px; height:auto">
             <div class="media-body">
                 <a href="{{env('APP_URL')}}/article/{{$post['post_name']}}">
-                    <h3>{{$post['post_title']}}</h3>
+                   {{$post['post_title']}}
                 </a>
                 <p>{{$post['post_date']}}</p>
             </div>

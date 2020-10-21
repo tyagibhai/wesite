@@ -2,10 +2,7 @@
 .blog_right_sidebar{
   background:#fff;
 }
-.comments-area 
-{
-  background: f0f0f0;
-}
+
 ::-webkit-input-placeholder 
 {
   color: #888 !important;
@@ -511,4 +508,37 @@ a.bg
 section.newsletter .container
 {
   padding-top:100px;
+}
+
+// comment section
+.comments-area li {
+  border-bottom: 2px dotted #eee;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 7px;
+  margin:15px 0px 0px 0px;
+}
+.comments-area p{
+  margin:0px;
+  padding:5px 0px;
+  margin-top:5px;
+}
+.comments-area .thumb{
+  height:32px;
+  width:32px;
+  margin-right:10px
+}
+.comment-author{
+  color:#47acc2;
+}
+p.load-cmnt{
+  color:#000;
+  cursor:pointer;
+  opacity:.7;
+}
+p.load-cmnt:hover{
+  opacity:1;
+  transition: all 0.5s ease 0s;
+}
+.comment-loading{
+  padding-top:10px;
 }

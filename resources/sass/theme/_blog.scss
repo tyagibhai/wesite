@@ -801,7 +801,7 @@
 }
 
 .comments-area {
-    background:#fafaff;
+    background:#ffffff;
     border: 1px solid #eee;
     padding: 50px 30px;
     margin-top: 50px;
@@ -845,6 +845,10 @@
     }
     .thumb {
         margin-right: 20px;
+    }
+    .thumb img{
+        width:32px;
+        height:32px;
     }
     .date {
         font-size: 13px;
